@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ExactEDI on GitHub</title>
+    <meta
+      name="description"
+      content="ExactEDI's GitHub home for developer-first healthcare X12 EDI tooling, examples, documentation, and open-source resources."
+    >
+    <meta property="og:title" content="ExactEDI on GitHub">
+    <meta
+      property="og:description"
+      content="Developer-first resources for deterministic, on-premises healthcare X12 EDI."
+    >
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/ExactEDI">
+    <link rel="icon" href="assets/exactedi-logo.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="https://exactedi.com" aria-label="ExactEDI website">
+        <img src="assets/exactedi-logo.png" alt="ExactEDI">
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#resources">Resources</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#principles">Principles</a>
+        <a class="nav-button" href="https://github.com/ExactEDI">GitHub Org</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">ExactEDI GitHub</p>
+            <h1 id="hero-title">Developer-first X12 EDI resources for healthcare teams.</h1>
+            <p class="hero-lede">
+              ExactEDI builds deterministic, on-premises healthcare EDI tooling for teams that need
+              X12 parsing, validation, explainable facts, and generation without sending PHI through
+              a hosted black box.
+            </p>
+            <div class="hero-actions" aria-label="Primary actions">
+              <a class="button primary" href="https://github.com/ExactEDI">View GitHub</a>
+              <a class="button secondary" href="https://exactedi.com/dev-docs">Read Dev Docs</a>
+            </div>
+          </div>
+
+          <div class="terminal-panel" aria-label="ExactEDI example workflow">
+            <div class="terminal-top">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>exactedi</strong>
+            </div>
+            <pre><code>$ exactedi validate claims.edi
+status: valid
+transaction_sets: 837P, 835
+memory: ~5 MB
+
+$ exactedi explain claims.edi --facts
+output: facts.json
+scope: HIPAA Safe Harbor facts
+runtime: local</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section class="stats-strip" aria-label="ExactEDI focus areas">
+        <div>
+          <strong>X12</strong>
+          <span>837, 835, eligibility, status, envelopes</span>
+        </div>
+        <div>
+          <strong>Local</strong>
+          <span>Native libraries, CLI, no phone-home runtime</span>
+        </div>
+        <div>
+          <strong>Deterministic</strong>
+          <span>Same input, same diagnostics, every run</span>
+        </div>
+      </section>
+
+      <section class="section" id="resources">
+        <div class="section-heading">
+          <p class="eyebrow">Repository Roadmap</p>
+          <h2>What belongs here</h2>
+          <p>
+            The public organization is currently ready for curated resources. This landing page sets
+            expectations for what developers should find as ExactEDI publishes examples and tools.
+          </p>
+        </div>
+        <div class="resource-grid">
+          <article class="card">
+            <span class="icon" aria-hidden="true">01</span>
+            <h3>SDK Examples</h3>
+            <p>Reference projects for Python, .NET, C, and C++ integration patterns.</p>
+          </article>
+          <article class="card">
+            <span class="icon" aria-hidden="true">02</span>
+            <h3>CLI Recipes</h3>
+            <p>Batch validation, JSONL parsing, fact extraction, and pipeline-friendly workflows.</p>
+          </article>
+          <article class="card">
+            <span class="icon" aria-hidden="true">03</span>
+            <h3>X12 Mapping Guides</h3>
+            <p>Plain-English bridges from loops, segments, and elements to developer-facing APIs.</p>
+          </article>
+          <article class="card">
+            <span class="icon" aria-hidden="true">04</span>
+            <h3>Validation Fixtures</h3>
+            <p>Focused sample files and expected diagnostics for regression-safe integrations.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="eyebrow">Built For Regulated Teams</p>
+          <h2 id="workflow-title">Keep the EDI engine close to your data.</h2>
+          <p>
+            ExactEDI is positioned for healthcare infrastructure where PHI handling, reproducibility,
+            and auditability matter. GitHub resources should make those guarantees inspectable.
+          </p>
+        </div>
+        <ol class="steps">
+          <li>
+            <span>Parse</span>
+            Stream X12 into structured transactions without loading whole files into memory.
+          </li>
+          <li>
+            <span>Validate</span>
+            Emit stable diagnostics with segment, element, and control-envelope context.
+          </li>
+          <li>
+            <span>Explain</span>
+            Produce PHI-safe facts for analytics, automation, and LLM-facing workflows.
+          </li>
+          <li>
+            <span>Generate</span>
+            Rebuild compliant outbound X12 from validated facts and partner rules.
+          </li>
+        </ol>
+      </section>
+
+      <section class="section" id="principles">
+        <div class="section-heading">
+          <p class="eyebrow">Engineering Principles</p>
+          <h2>A GitHub presence with a clear contract</h2>
+        </div>
+        <div class="principles">
+          <article>
+            <h3>No invented magic</h3>
+            <p>Examples should show real command contracts, explicit inputs, and inspectable output.</p>
+          </article>
+          <article>
+            <h3>PHI stays local</h3>
+            <p>Resources should reinforce on-prem execution and careful Safe Harbor boundaries.</p>
+          </article>
+          <article>
+            <h3>EDI made legible</h3>
+            <p>Docs should translate X12 detail into vocabulary developers can act on.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div>
+          <p class="eyebrow">Start Here</p>
+          <h2>Follow ExactEDI on GitHub for upcoming developer resources.</h2>
+        </div>
+        <div class="cta-actions">
+          <a class="button primary" href="https://github.com/ExactEDI">Open GitHub Organization</a>
+          <a class="button secondary" href="https://exactedi.com/request-access">Request Beta Access</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <img src="assets/exactedi-logo.png" alt="ExactEDI">
+      <span>Developer resources for deterministic healthcare X12 EDI.</span>
+      <a href="https://exactedi.com">exactedi.com</a>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
